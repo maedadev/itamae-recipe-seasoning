@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-if you have a recipe for steak which accepts seasonings of your choice like below,
+if you have a recipe for steak which accepts seasonings of your choice with a method call 'include_seasoning' like below,
 
 * steak.rb
 ```
