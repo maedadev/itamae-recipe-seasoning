@@ -20,7 +20,31 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+if you have a recipe for steak which accepts seasonings of your choice like below,
+
+```
+include_recipe 'put_oil_in_the_pan'
+include_recipe 'put_a_steak'
+include_recipe 'bake_it'
+
+include_seasoning
+
+include_recipe 'serve_it_on_the_plate'
+```
+
+First, enable seasoning patch at the top of your recipe.
+
+```
+require 'itamae/recipe/seasoning'
+```
+
+Then, you can add your own seasonigs into to the recipe!
+
+```
+include_recipe 'steak' do
+  include_recipe 'salt_and_pepper'
+end
+```
 
 ## Development
 
