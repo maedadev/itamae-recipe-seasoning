@@ -22,6 +22,7 @@ Or install it yourself as:
 
 if you have a recipe for steak which accepts seasonings of your choice like below,
 
+* steak.rb
 ```
 include_recipe 'put_oil_in_the_pan'
 include_recipe 'put_a_steak'
