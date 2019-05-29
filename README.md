@@ -47,6 +47,11 @@ include_recipe 'steak' do
 end
 ```
 
+## Recipes which can be arranged by extra seasonings
+
+* https://github.com/maedadev/itamae-plugin-recipe-god
+* https://github.com/maedadev/itamae-plugin-recipe-supervisor
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
