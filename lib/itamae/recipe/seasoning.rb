@@ -5,7 +5,7 @@ module Itamae
     attr_reader :parent_recipe
     attr_reader :seasoning
     attr_accessor :original_recipe
-    
+
     def load_with_seasoning(vars = {}, parent_recipe = nil, seasoning = nil)
       if seasoning
         @parent_recipe = parent_recipe
@@ -13,13 +13,13 @@ module Itamae
         @seasoning = seasoning
       end
       context = EvalContext.new(self, vars)
-      context.instance_eval(File.read(path), path, 1)
+      InstanceEval.new(File.read(path), path, 1, context: context).call
     end
     alias_method :load_without_seasoning, :load
     alias_method :load, :load_with_seasoning
     
     class EvalContext
-      
+
       def include_seasoning
         if @recipe.seasoning
           context = EvalContext.new(@recipe.parent_recipe, {})
